@@ -8,7 +8,7 @@ class MainMenu(Menu):
         Menu.__init__(self, master, **kwargs)
 
         file_menu = Menu(self, tearoff=0)
-        file_menu.add_command(label='Save Data', command=lambda: self.save_data)
+        file_menu.add_command(label='Save Data', command=lambda: self.master.save_data)
         file_menu.add_command(label='Exit', command=self.quit)
         self.add_cascade(label='File', underline=0, menu=file_menu)
 
